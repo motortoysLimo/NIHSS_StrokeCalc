@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SCExtendedCell" customModule="StrokeCalc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNb-u0-ae1">
+                    <rect key="frame" x="0.0" y="0.0" width="311" height="65"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAN-xD-q10">
+                            <rect key="frame" x="15" y="8" width="296" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="49" id="3KN-P5-t8Q"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="Label">
+                                    <attributes>
+                                        <color key="NSColor" red="0.10588235294117647" green="0.53725490196078429" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gl-PE-TL5">
+                            <rect key="frame" x="310" y="0.0" width="1" height="65"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.81568627450980391" green="0.88627450980392153" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.98039215686274506" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="YAN-xD-q10" firstAttribute="leading" secondItem="QNb-u0-ae1" secondAttribute="leading" constant="15" id="KDD-Ha-AZf"/>
+                        <constraint firstItem="YAN-xD-q10" firstAttribute="centerY" secondItem="QNb-u0-ae1" secondAttribute="centerY" id="S8E-Rv-Jl3"/>
+                        <constraint firstAttribute="trailing" secondItem="YAN-xD-q10" secondAttribute="trailing" id="TtU-YN-Brb"/>
+                        <constraint firstAttribute="height" constant="65" id="Vbt-EQ-04y"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZ3-Zi-8GZ">
+                    <rect key="frame" x="322" y="12" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="video_icon"/>
+                    <connections>
+                        <action selector="actionTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="2Jd-6w-79K"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="QNb-u0-ae1" secondAttribute="trailing" constant="64" id="VKR-e6-fLR"/>
+                <constraint firstItem="QNb-u0-ae1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="avA-DK-Ppe"/>
+                <constraint firstItem="QNb-u0-ae1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dgV-NP-PD9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="actionButton" destination="TZ3-Zi-8GZ" id="lY0-LK-GUk"/>
+                <outlet property="answerLabel" destination="YAN-xD-q10" id="DSw-p6-VNM"/>
+            </connections>
+            <point key="canvasLocation" x="28.5" y="-46.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="video_icon" width="40" height="40"/>
+    </resources>
+</document>
